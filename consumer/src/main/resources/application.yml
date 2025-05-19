@@ -1,0 +1,14 @@
+kafka:
+  topic: price-updates
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    properties:
+      schema.registry.url: http://localhost:8081
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      group-id: price-update-group
+      properties:
+        specific.avro.reader: true

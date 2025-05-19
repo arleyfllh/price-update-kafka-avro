@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "PriceUpdate",
+  "namespace": "com.price_update_kafka_avro.avro_models",
+  "fields": [
+    {"name": "itemCode", "type": "string"},
+    {"name": "itemName", "type": "string"},
+    {"name": "newPrice", "type": "double"}
+  ]
+}
